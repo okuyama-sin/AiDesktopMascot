@@ -1,0 +1,57 @@
+﻿<Window x:Class="desktopmascot.Clock"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:desktopmascot"
+        mc:Ignorable="d"
+        Title="Clock" Height="150" Width="150"
+        Background="Transparent"
+        AllowsTransparency="True"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Image x:Name="Clock1" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="150" Source="clock.png" Margin="1,1,-1,0"/>
+        <Label x:Name="nom1" Content="1" HorizontalAlignment="Left" Margin="97,10,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="nom2" Content="2" HorizontalAlignment="Left" Margin="119,32,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="nom3" Content="3" HorizontalAlignment="Left" Margin="129,62,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="nom4" Content="4" HorizontalAlignment="Left" Margin="118,92,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="nom5" Content="5" HorizontalAlignment="Left" Margin="96,111,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="nom6" Content="6" HorizontalAlignment="Left" Margin="67,118,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="nom7" Content="7" HorizontalAlignment="Left" Margin="39,112,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="nom8" Content="8" HorizontalAlignment="Left" Margin="17,93,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="nom9" Content="9" HorizontalAlignment="Left" Margin="7,62,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="nom10" Content="10" HorizontalAlignment="Left" Margin="11,32,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="nom11" Content="11" HorizontalAlignment="Left" Margin="31,10,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="nom12" Content="12" HorizontalAlignment="Left" Margin="62,0,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Canvas Margin="0,0,0,0">
+            <Line x:Name="HourLine"  Stroke="Black" Fill="Black" 
+              X1="75" Y1="75" X2="75" Y2="30"              
+               StrokeThickness="3" Height="150" Width="150" >
+                <Line.RenderTransform>
+                    <RotateTransform  x:Name="AngleHour" Angle="0" 
+                                  CenterX="75" CenterY="75"/>
+                </Line.RenderTransform>
+            </Line>
+            <Line x:Name="MinuteLine"  Stroke="Black" Fill="Black" 
+              X1="75" Y1="75" X2="75" Y2="15"              
+               StrokeThickness="2" >
+                <Line.RenderTransform>
+                    <RotateTransform x:Name="AngleMinute"  Angle="0" 
+                                 CenterX="75" CenterY="75"/>
+                </Line.RenderTransform>
+            </Line>
+            <Line x:Name="SecondLine"  Stroke="Black" Fill="LightGray"
+              X1="75" Y1="75" X2="75" Y2="20"  >
+                <Line.RenderTransform>
+                    <RotateTransform x:Name="AngleSecond" Angle="0"  
+                                 CenterX="75" CenterY="75"/>
+                </Line.RenderTransform>
+            </Line>
+            <Ellipse Fill="Black" Width="6" Height="6" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                 Canvas.Top="72" Canvas.Left="72"/>
+        </Canvas>
+    </Grid>
+</Window>

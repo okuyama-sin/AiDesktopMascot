@@ -1,0 +1,39 @@
+﻿<Window x:Class="desktopmascot.DocomoSubWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:desktopmascot"
+        mc:Ignorable="d"
+        Title="DocomoSubWindow" Height="450" Width="600">
+    <Grid Margin="0,0,0,0">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF91FFF0" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBox Name="textbox1" HorizontalAlignment="Left" Height="48" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="342" />
+        <Button Name="button1" Content="送信" HorizontalAlignment="Left" Margin="357,10,0,0"
+                VerticalAlignment="Top" Width="75" Height="22" Click="Button1_click"/>
+        <ComboBox Name="combo1" HorizontalAlignment="Left" Margin="437,10,0,0"
+                  VerticalAlignment="Top" Width="145">
+            <ComboBoxItem Content="意図解釈"/>
+            <ComboBoxItem Content="知識検索"/>
+            <ComboBoxItem Content="キャラクタ変換"/>
+            <ComboBoxItem Content="トレンド記事抽出"/>
+            <ComboBoxItem Content="言語解析（形態素解析）"/>
+        </ComboBox>
+        <ComboBox Name="combo2" HorizontalAlignment="Left" Margin="437,37,0,0" VerticalAlignment="Top" Width="145" SelectedIndex="0">
+            <ComboBoxItem Name="Imabari" Content="愛媛県今治市弁"/>
+            <ComboBoxItem Name="SikokuTyuo" Content="愛媛県四国中央市弁"/>
+            <ComboBoxItem Name="Matuyama" Content="愛媛県松山市弁"/>
+            <ComboBoxItem Name="Kansai" Content="関西弁"/>
+            <ComboBoxItem Name="Hakata" Content="博多弁"/>
+            <ComboBoxItem Name="Fukushima" Content="福島弁"/>
+            <ComboBoxItem Name="Mie" Content="三重弁"/>
+        </ComboBox>
+        <TextBox Name="textbox2" HorizontalAlignment="Left" Height="320" Margin="10,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="572"/>
+        <CheckBox Name="Voice_check" Content="VoiceAPI使用" HorizontalAlignment="Left" Margin="437,64,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
